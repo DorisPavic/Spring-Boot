@@ -1,0 +1,11 @@
+
+INSERT INTO Location (created_at,title, subtitle,postal_code) VALUES (TIMESTAMP'2021-04-01 10:17:03','Lovište','Lovište',20269);
+INSERT INTO Accommodation (created_at,modified_at,title,subtitle,description,type,categorization,person_count,free_cancelation,price, location_id) VALUES (TIMESTAMP'2021-04-01 10:17:03',TIMESTAMP'2021-12-07 19:35:59','Pasika', 'Holiday house with swimming pool','The Pasika facility is located in Lovište and offers accommodation with air conditioning, free Wi-Fi, the possibility to borrow bicycles and access to a garden with an outdoor pool. Free private parking is also available to guests. The accommodation includes 2 bedrooms, 1 bathroom, bed linen, towels, a flat-screen TV with satellite channels, a dining area, a fully equipped kitchen, and a patio with pool views.',
+                                                                                                                              'APARTMENT',4,7,FALSE, 1700,1);
+INSERT INTO Users (created_at,first_name,last_name,email,password,role) VALUES (TIMESTAMP'2021-11-12 07:06:57','Jelena', 'Berkovic', 'jberkovic@gmail.com','$2a$12$gVY60sACf7ymyljQdztxLuH3YQPIH4ct6xgxQ29kuS0A8Mh1/4N4i','ROLE_USER');
+INSERT INTO Users (created_at,first_name,last_name,email,password,role) VALUES (TIMESTAMP'2021-11-12 07:06:57','Dragutin', 'Rudan', 'drudan@gmail.com','$2a$12$cTpvU1NOzJ8eEonKg0r9oushFP3NtIt1wzz787o9XYYGZhPmi6ogy','ROLE_USER');
+INSERT INTO Users (created_at,first_name,last_name,email,password,role) VALUES (TIMESTAMP'2022-12-03 10:23:00','Doris', 'Pavic', 'pavicdoris@gmail.com','$2a$12$U4GbY/jnZ6agxweniYsVVepvTZz/6MSrab9kr9Uzv//L4diN9JWhC','ROLE_ADMIN');
+INSERT INTO Reservation (created_at,modified_at,check_in,check_out,type,person_count,submitted, accommodation_id, user_id) VALUES (TIMESTAMP'2022-08-01 09:00:03',CURRENT_TIME,TIMESTAMP'2022-09-03 17:00:00',TIMESTAMP'2022-09-10 09:00:00','PERMANENT', 4, TRUE, 1 ,1);
+INSERT INTO Reservation (created_at,check_in,check_out,type,person_count,submitted, accommodation_id, user_id) VALUES (TIMESTAMP'2022-08-01 09:00:03',TIMESTAMP'2022-09-03 17:00:00',TIMESTAMP'2022-09-10 09:00:00','PERMANENT', 4, TRUE, 1 ,2);
+INSERT INTO Reservation_history (entry_timestamp, from_type, to_type, reservation_id) VALUES (CURRENT_TIME,'TEMPORARY','PERMANENT',1);
+
